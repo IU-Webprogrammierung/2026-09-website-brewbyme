@@ -1,0 +1,76 @@
+/*
+  Basis-Stylesheet (Konzeptionsphase)
+  Farben und Typografie nach dem Tarifa-Konzept.
+  Layout und Media Queries folgen in der Erarbeitungsphase.
+*/
+
+:root {
+  /* Himmel und Sand */
+  --farbe-himmel: #f4e6d4;
+  --farbe-sand: #e3a46f;
+  --farbe-creme: #f6efe2;
+
+  /* Meer, von hell nach dunkel */
+  --farbe-meer-hell: #8ecdc4;
+  --farbe-meer: #3d7f86;
+  --farbe-petrol: #1f5a68;
+  --farbe-tiefsee: #163343;
+
+  /* Akzente und Text */
+  --farbe-terrakotta: #a35a3c;
+  --farbe-text: #1d3b47;
+
+  /* Typografie */
+  --schrift-titel: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --schrift-text: "Karla", "Segoe UI", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--farbe-himmel);
+  color: var(--farbe-text);
+  font-family: var(--schrift-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: var(--schrift-titel);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--farbe-petrol);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--farbe-terrakotta);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sprunglink: nur bei Tastaturfokus sichtbar */
+.sprunglink {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--farbe-petrol);
+  color: var(--farbe-creme);
+}
+
+.sprunglink:focus {
+  top: 1rem;
+}
