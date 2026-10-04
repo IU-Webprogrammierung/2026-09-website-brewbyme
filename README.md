@@ -14,3 +14,35 @@ Die Gestaltung ist von Tarifa inspiriert. Windsurfen und die Bewegung der Wellen
 - Projekte
 - Blog
 - Impressum
+
+## Projektstruktur
+
+```
+├── index.html          Startseite mit Windsurfer-Navigation
+├── ueber-mich.html     Über mich, Werdegang, Profile
+├── projekte.html       Projekte (Platzhalter)
+├── blog.html           Blogbeiträge
+├── impressum.html      Impressum
+├── css/
+│   └── style.css       Basis-Stylesheet (Farben, Typografie)
+├── assets/
+│   └── img/            SVG-Grafiken aus dem Figma-Entwurf
+└── .github/
+    └── workflows/
+        └── pages.yml   Veröffentlichung als GitHub Page
+```
+
+## Lokale Vorschau
+
+Die Website ist rein statisch. Zur Vorschau `index.html` im Browser öffnen oder in Visual Studio Code die Erweiterung Live Preview nutzen.
+
+## Veröffentlichung
+
+Bei jedem Push auf den Branch `main` veröffentlicht ein GitHub-Actions-Workflow die Website als GitHub Page. Einmalig muss dafür im Repository unter **Settings → Pages → Build and deployment** als Quelle **GitHub Actions** ausgewählt werden.
+
+## Stand: Konzeptionsphase
+
+- Semantisches HTML für alle vier Bereiche plus Startseite
+- Barrierefreiheit: `lang="de"`, Sprunglink, `aria-label` und `aria-current` in der Navigation, Alternativtexte, Tabellenbeschriftung
+- Basis-Stylesheet mit CSS-Variablen für Farben und Schriften
+- Commits nach Conventional Commits
